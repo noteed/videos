@@ -15,5 +15,6 @@ their transcripts.
 
 In this first video, not strictly speaking about Nix, I show one way to get a
 fresh Debian-based virtual machine in the cloud. Such a machine is used in the
-next video to show how to install Nix. [View on
-YouTube](https://www.youtube.com/watch?v=LeasCiM0NRI)
+next video to show how to install Nix.
+
+[View on YouTube](https://www.youtube.com/watch?v=LeasCiM0NRI)

@@ -145,7 +145,7 @@ generate MP4s that are overlayed in Blender on top of the main video.
   "bilinear" because the later results in a rendering artefact: a black border
   appears around the overlayed video.
 
-See the `highlighter/` directory for the MP4 files.
+See the [`highlighter/`](highlighter/) directory for the MP4 files.
 
 
 # YouTube brand account
