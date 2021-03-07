@@ -28,10 +28,10 @@ If you plan to re-create what I do in this video, you'll need:
   `DIGITALOCEAN_ACCESS_TOKEN`),
 - and finally the `doctl` command-line tool itself.
 
-With those few things in place, let's look at the doctl tool.
+With those few things in place, let's look at the doctl command-line tool.
 
 doctl accepts a `--help` flag to discover its capabilities, which are organized
-in subcommands. Each of them also accepts that `--help` flag, and also expose
+in subcommands. Each of them also accepts that `--help` flag, and also exposes
 sub-subcommands.
 
 And here is the command we use.

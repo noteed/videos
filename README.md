@@ -37,6 +37,7 @@ https://www.youtube.com/channel/UCnFhDQZWUBKHfIOHxUXlTsA.
   YouTube, and a transcript)
 - Make sure the description is filled on YouTube, possibly updated with links
   to the next videos.
+- Add subtitles within the YouTube web interface.
 
 
 # Terminal recording

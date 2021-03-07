@@ -1,0 +1,232 @@
+1
+00:00:09,200 --> 00:00:12,800
+Dans cette vidéo, je montre comment créer
+une machine virtuelle dans le cloud,
+
+2
+00:00:12,800 --> 00:00:17,200
+puis la supprimer. J'utilise Digital Ocean et
+leur outil en ligne de commande, appelé doctl.
+
+3
+00:00:18,880 --> 00:00:22,800
+Dans la prochaine vidéo, j'installerai Nix
+sur une telle machine virtuelle,
+
+4
+00:00:22,800 --> 00:00:25,440
+simulant normallement l'expérience de
+quelqu'un de nouveau sur Nix.
+
+5
+00:00:27,120 --> 00:00:29,840
+Si vous prévoyez de recréer ce que je fais dans
+cette vidéo, vous aurez besoin de:
+
+6
+00:00:31,840 --> 00:00:33,200
+un compte Digital Ocean,
+
+7
+00:00:34,320 --> 00:00:38,720
+une paire de clés publique/privée SSH (avec
+la clé publique uploadée sur Digital Ocean),
+
+8
+00:00:40,080 --> 00:00:41,440
+un token d'accès à l'API,
+
+9
+00:00:42,720 --> 00:00:45,520
+et finallement l'outil en ligne de commande
+`doctl` lui-même.
+
+10
+00:00:46,640 --> 00:00:50,400
+Avec ces quelques choses en place,
+regardons à l'outil doctl.
+
+11
+00:00:51,360 --> 00:00:56,720
+doctl accepte un argument `--help` permettant
+de découvrir ses possibilités, qui sont organisées
+
+12
+00:00:56,720 --> 00:01:02,160
+en sous-commandes. Chacune d'elles accepte
+également cet argument `--help`,
+
+13
+00:01:02,160 --> 00:01:03,920
+and expose des sous-sous-commandes.
+
+
+14
+00:01:08,320 --> 00:01:09,760
+Et voici la commande que nous utilisons.
+
+15
+00:01:10,800 --> 00:01:13,520
+Digital Ocean appelle ses machines
+virtuelles des "Droplets".
+
+16
+00:01:14,160 --> 00:01:16,720
+Les Droplets peuvent être trouvées dans
+la sous-commande "compute".
+
+17
+00:01:17,680 --> 00:01:21,120
+Le tout premier argument sera le nom
+de notre machine virtuelle.
+
+18
+00:01:21,920 --> 00:01:27,120
+Ici nous spécifions la région où nous voulons
+notre Droplet. Comme je suis de Belgique,
+
+19
+00:01:27,120 --> 00:01:30,320
+j'utilise quelque chose de proche de moi;
+dans ce cas-ci Amsterdam 3.
+
+20
+00:01:31,760 --> 00:01:35,120
+L'image de machine virtuelle que nous choisissons
+est basée sur une Debian récente.
+
+21
+00:01:36,320 --> 00:01:41,840
+Nous pouvons spécifier la "taille" de notre Droplet,
+c'est à dire les CPUs, mémoire et disque.
+
+22
+00:01:42,960 --> 00:01:48,880
+Nous pouvons également spécifier l'empreinte
+de nos clés SSH. Notez que la clé publique
+
+23
+00:01:48,880 --> 00:01:53,200
+doit déjà être uploadée chez Digital Ocean
+à travers leur interface web pour qu'ils
+
+24
+00:01:53,200 --> 00:01:55,920
+puissent la copier dans la machine
+virtuelle nouvellement créée.
+
+25
+00:01:57,280 --> 00:02:01,920
+Lorsque la commande retourne, doctl affiche
+quelques informations. Dans notre cas
+
+26
+00:02:01,920 --> 00:02:06,000
+nous limitons cela à quelques champs. Celui
+qui nous intéresse en particulier
+
+27
+00:02:06,000 --> 00:02:08,160
+est l'adresse IP.
+
+
+28
+00:02:08,160 --> 00:02:09,760
+Normallement, l'API de Digital Ocean acquiesce
+
+29
+00:02:10,480 --> 00:02:16,560
+la demande de création et doctl retourne également
+la main. Ici nous utilisons l'argument `--wait`
+
+30
+00:02:16,560 --> 00:02:19,840
+pour attendre jusqu'à ce que la machine
+soit vraiment prête à l'emploi.
+
+31
+00:02:20,640 --> 00:02:25,200
+Cela est utile pour des scripts semi-automatisés
+de façon à pouvoir SSHer
+
+32
+00:02:25,200 --> 00:02:28,720
+directement dans la machine virtuelle, sans
+devoir "poller" pour vérifier sa disponibilité.
+
+33
+00:02:30,320 --> 00:02:34,400
+Exécutons cette commande "create". Normallement
+cela prend à peu près 40 secondes, mais
+
+34
+00:02:34,400 --> 00:02:36,800
+comme nous sommes dans une vidéo, nous
+allons passer cette partie.
+
+35
+00:02:41,920 --> 00:02:45,040
+Et maintenant nous pouvons voir,
+dans la sortie de la commande doctl,
+
+36
+00:02:45,040 --> 00:02:47,520
+l'adresse IP de notre machine
+virtuelle flambant neuve.
+
+37
+00:02:48,080 --> 00:02:50,480
+SSHons dans cette machine en tant que `root`.
+
+38
+00:02:51,520 --> 00:02:55,600
+Comme c'est la première fois que nous
+rencontrons cette machine, nous devons
+
+39
+00:02:55,600 --> 00:02:57,600
+accepter son empreinte SSH...
+et voilà, nous y sommes.
+
+40
+00:02:59,120 --> 00:03:04,080
+Nous pouvons par exemple vérifier quel
+genre d'OS nous avons... et c'est bien
+
+41
+00:03:04,080 --> 00:03:05,040
+un système basé sur une Debian récente.
+
+42
+00:03:05,760 --> 00:03:12,000
+Quittons notre session SSH. Normallement
+j'utiliserais un raccourci `ctrl-d`,
+
+43
+00:03:12,000 --> 00:03:13,840
+mais je vais tapper `exit` en entier
+pour la vidéo.
+
+44
+00:03:14,480 --> 00:03:18,640
+Et maintenant que nous avons utilisé notre
+machine virtuelle, nous pouvons la supprimer,
+
+45
+00:03:18,640 --> 00:03:23,600
+également en utilisant l'outil doctl. Cela nous
+assure de ne plus encourir les coûts associés
+
+46
+00:03:23,600 --> 00:03:24,480
+à cette machine virtuelle.
+
+47
+00:03:25,280 --> 00:03:29,520
+C'est assez simple: nous passons le nom
+de notre Droplet et appuyons sur "enter".
+
+48
+00:03:30,800 --> 00:03:34,800
+C'en est fini pour cette vidéo. Dans la
+prochaine, nous verrons comment installer Nix.
