@@ -1,0 +1,57 @@
+<svg viewBox="0 0 2560 1440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+      @font-face {
+        font-family: "IBM Plex Sans";
+        font-style: normal;
+        font-weight: 400;
+        src: url('../../images/fonts/ibm-plex-sans.ttf');
+      }
+    </style>
+        <style type="text/css" id="generated-style"><![CDATA[
+        #screen {
+                font-family: 'DejaVu Sans Mono for Powerline', monospace;
+                font-style: normal;
+                font-size: 93px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+            .foreground {fill: #262626;}
+            .background {fill: #ffffff;}
+            .color0 {fill: #000000;}
+            .color1 {fill: #cd0000;} /* Python strings in Vim */
+            .color2 {fill: #32895c;}
+            .color3 {fill: #f96f1c;}
+            .color4 {fill: #0001ef;} /* Python comments in Vim */
+            .color5 {fill: #e733ce;} /* Python import keywords in Vim */
+            .color6 {fill: #32c2c0;}
+            .color7 {fill: #b2b2b2;}
+            .color8 {fill: #545753;}
+            .color9 {fill: #fb0416;}
+            .color10 {fill: #2cc631;}
+            .color11 {fill: #fcd627;}
+            .color12 {fill: #156ffe;}
+            .color13 {fill: #e800b0;}
+            .color14 {fill: #39d5ce;}
+            .color15 {fill: #ededec;}
+    ]]></style>
+  </defs>
+  <svg id="screen">
+  <rect class="background" height="100%" width="100%" x="0" y="0"/>
+  <g transform="translate(192,318)">
+  <text x="0" textLength="56" class="color9">&#11044;</text>
+  <text x="56" textLength="1232" class="foreground"> The Nix recordings #0</text>
+  </g>
+  </svg>
+  <!-- x="248" if there is a space before the T, x="304" without the leading
+       space. Thus the delta per character seems to be 56. Which is indeed what
+       I have configured in termtosvg.
+  <text x="304" y="378" font-size="93" font-family="DejaVu Sans Mono">The Nix recordings #1</text>
+  -->
+  <text x="304" y="444" font-size="224" font-family="IBM Plex Sans">Sample lines for</text>
+  <text x="304" y="688" font-size="224" font-family="IBM Plex Sans">the last frame</text>
+  <text x="304" y="1144" font-size="80" font-family="DejaVu Sans Mono" fill="blue">noteed.com/videos</text>
+</svg>

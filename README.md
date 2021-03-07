@@ -177,7 +177,7 @@ monospace font I use in xterm, and thus that I want to replicate in my
 recordings,  is `DejaVu Sans Mono for Powerline`, so I have to change that.
 
 
-# Title / thumbnail
+# Title image
 
 For each video, it is possible to choose a specific frame to represent the
 video in listings, but it is also possible to upload an image. Just like for
@@ -190,6 +190,15 @@ $ inkscape title.svg --export-filename title.png -b '#ffffff' -y 255
 
 The `-b` option specifies a background color, and the `-y` specifies the
 background opacity.
+
+That title image is actually used as the last frame for the title sequence.
+
+
+# Title sequence
+
+The title sequences for each video are created in the same way. The scripts and
+necessary assets are in the
+[`nix-rec/00-title-youtube/`](nix-rec/00-title-youtube/) directory.
 
 
 # Interactive terminal setup
