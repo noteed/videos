@@ -1,0 +1,9 @@
+123456789 123456789 123456789 12345678
+2
+3
+4
+5 xterm -b 192 -fa \
+6  'DejaVu Sans Mono for Powerline' \
+7  -fs 32
+8
+9

@@ -1,0 +1,12 @@
+123456789 123456789 123456789 123456789 123456789 1
+2       10        20        30        40        50
+3
+4
+5
+6
+7
+8  This can be achieved with:
+9
+10    xterm -b 192 \
+11     -fa 'DejaVu Sans Mono for Powerline' -fs 18
+12

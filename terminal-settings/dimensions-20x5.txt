@@ -1,0 +1,1 @@
+xterm -b 160 -fa 'DejaVu Sans Mono for Powerline' -fs 64
