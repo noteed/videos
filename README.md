@@ -11,7 +11,9 @@ https://www.youtube.com/channel/UCnFhDQZWUBKHfIOHxUXlTsA.
 
 # Listing
 
-- [The Nix recording #1 - Creating a virtual machine with doctl](https://www.youtube.com/watch?v=LeasCiM0NRI)
+- [The Nix recording #1 - Creating a virtual machine with
+  doctl](nix-rec/01-create-droplet/README.md) - [View on
+  YouTube](https://www.youtube.com/watch?v=LeasCiM0NRI)
 
 
 # Precautions
