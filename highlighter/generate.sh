@@ -1,9 +1,9 @@
 #! /usr/bin/env bash
 
-# Generate an animated yello highlighter line.
+# Generate an animated yellow highlighter line.
 #
 # Each frame is first generated as SVG, then converted to PNG using inkscape,
-# then assembled as an MP4 (I think it is nicer to have on single file as
+# then assembled as an MP4 (I think it is nicer to have one single file as
 # output, although Blender, where the video editing is done, supports image
 # sequences too).
 #
