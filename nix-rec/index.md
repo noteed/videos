@@ -9,8 +9,10 @@ their transcripts.
 <hr class="bt bb-0 br-0 bl-0 mh0 mt4 pb4 w4 bw1 b--black">
 
 <figure>
-<object type="image/svg+xml" data="01/title.svg" style="width:50.0%;height:50.0%">
+<a href="https://www.youtube.com/watch?v=LeasCiM0NRI">
+<object type="image/svg+xml" data="01/title.svg" class="ba bw2 b--black-30 mw-100">
 01. Creating a virtual machine with doctl</object>
+</a>
 </figure>
 
 In this first video, not strictly speaking about Nix, I show one way to get a
