@@ -1,8 +1,6 @@
-{ nixpkgs ? <nixpkgs>
-}:
-
 let
-  pkgs = import nixpkgs {};
+  sources = import ../nix/26.05/nix/sources.nix;
+  pkgs = import sources.nixpkgs {};
 in
 {
   md.index = pkgs.writeText "index" (builtins.readFile ../nix-rec/index.md);
