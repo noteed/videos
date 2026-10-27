@@ -1,0 +1,3 @@
+{
+  site = (import ./site);
+}
